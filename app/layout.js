@@ -1,13 +1,15 @@
-import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 
-const Layout = ({ Children }) => {
+const Layout = ({ children }) => {
   return (
-    <div>
-      <Navbar />
-      {Children}
-      <Footer />
-    </div>
+    <html lang="en">
+      <body>
+        <div>
+          <Navbar />
+          {children}
+        </div>
+      </body>
+    </html>
   );
 };
 export default Layout;
