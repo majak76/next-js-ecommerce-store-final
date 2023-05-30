@@ -28,7 +28,7 @@ export async function createOrUpdateComment(productId, comment) {
   // [{id:1, comment:"abc"}]
   if (productToUpdate) {
     // we need to update the fruitComment
-    productToUpdate.comment = comment;
+    productToUpdate.comment = Number(productToUpdate.comment) + Number(comment);
   } else {
     // case C: the cookie is defined but doesn't have the fruit in the action
     // if we are in fruit 1
@@ -36,11 +36,21 @@ export async function createOrUpdateComment(productId, comment) {
     productComments.push({
       // we need insert the fruitCommnet
       id: productId,
-      comment,
+      comment: Number(comment),
     });
   }
 
   // 4. we override the cookie
   // This set the cookies into the Response Headers
-  await cookies().set('fruitComments', JSON.stringify(productComments));
+  await cookies().set('productComments', JSON.stringify(productComments));
+}
+
+export async function getQuantity() {
+  // 1. Get the current cookie from the Request Headers
+  const productQuantityCookie = await getCookie('cart');
+  // 2. Parse the cookie
+  const productQuantities = !productQuantityCookie
+    ? [] // 3. Create a new array with the productQuantity
+    : parseJson(productQuantityCookie);
+  return productQuantities;
 }
