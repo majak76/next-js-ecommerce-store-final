@@ -24,8 +24,7 @@ export default async function SingleProductPage({ params }) {
         <h5>{singleProduct.description}</h5>
         <h6 data-test-id="product-price"> € {singleProduct.price}</h6>
         <p>{singleProduct.text}</p>
-        <AddToCart/>
-
+        <AddToCart productId={singleProduct.id} />
       </div>
     </section>
   );

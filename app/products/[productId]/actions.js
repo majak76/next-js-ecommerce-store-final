@@ -4,45 +4,46 @@ import { cookies } from 'next/headers';
 import { getCookie } from '../../../util/cookies';
 import { parseJson } from '../../../util/json';
 
-export async function createOrUpdateComment(productId, comment) {
+export async function createOrUpdateComment(productId, quantity) {
   // 1. get the current cookie
   // This get the cookies from the Request Headers
-  const productCommentsCookie = getCookie('cart');
+  const stringCookie = getCookie('cart');
   // 2. we parse the cookie
-  const productComments = !productCommentsCookie
+  const parsedCookie = !stringCookie
     ? // case A: cookie is undefined
       // undefined
       // we need to create the new array with the fruitCommnet inside
       []
-    : parseJson(productCommentsCookie);
+    : parseJson(stringCookie);
 
   // 3. we edit the object
 
   // We get the object for the fruit in cookies or undefined
-  const productToUpdate = productComments.find((productComment) => {
-    return productComment.id === productId;
+  const cookieItemtoUpdate = parsedCookie.find((item) => {
+    return item.id === productId;
   });
 
   // case B: the cookie is defined but have the fruit in the action
   // if we are in fruit 1
   // [{id:1, comment:"abc"}]
-  if (productToUpdate) {
+  if (cookieItemtoUpdate) {
     // we need to update the fruitComment
-    productToUpdate.comment = Number(productToUpdate.comment) + Number(comment);
+    cookieItemtoUpdate.quantity =
+      Number(cookieItemtoUpdate.quantity) + Number(quantity);
   } else {
     // case C: the cookie is defined but doesn't have the fruit in the action
     // if we are in fruit 1
     // [{id:2, comment:"abc"}]
-    productComments.push({
+    parsedCookie.push({
       // we need insert the fruitCommnet
       id: productId,
-      comment: Number(comment),
+      quantity: Number(quantity),
     });
   }
 
   // 4. we override the cookie
   // This set the cookies into the Response Headers
-  await cookies().set('productComments', JSON.stringify(productComments));
+  await cookies().set('cart', JSON.stringify(parsedCookie));
 }
 
 export async function getQuantity() {
