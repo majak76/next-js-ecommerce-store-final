@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { products } from '../database/products';
 import styles from './page.module.scss';
 
-export default function Home() {
+function HomePage() {
   return (
-    <main>
-      <div className={styles.container}>
-        <h1>Homepage</h1>
-      </div>
-    </main>
+    <div style={{ backgroundColor: 'green' }}>
+      <h1>Best burgers in town</h1>
+      <Image src="/img/homepage.jpg" alt="Homepage" width={500} height={300} />
+    </div>
   );
 }
+
+export default HomePage;

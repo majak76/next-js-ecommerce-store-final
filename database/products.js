@@ -10,15 +10,15 @@ export const products = [
   },
   {
     id: 2,
-    firstName: 'Olive',
+    firstName: 'Ainsworth',
     price: 17,
     type: 'burger',
     accessory: 'onion',
-    text: 'Olive burger is an American burger variety originating from Michigan. It’s made with a combination of ground beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.Some like to add a bit olive brine to the olive-mayo mix, while others put the mayonnaise on a bun, and the patties are topped with olives before they’re placed into the buns. There are many theories about the origins of this burger, and some people claim that Olympic Broil in Lansing made the first olive burger in the 1960s, while others say it was made much earlier at Kewpee Hotel Hamburgs in Grand Rapids.',
+    text: 'The Mac & Cheese Burger is a thing of pure insanity. It features a panko-crusted mac & cheese patty, topped with a beef patty, topped with more mac & cheese. The cheese makes the patty hard to find, but once beef meets tongue it is a pure bliss. The bun was shockingly able to hold its own against the deluge of melted cheese, noodles and meat..',
   },
   {
     id: 3,
-    firstName: 'Pimento',
+    firstName: 'Mexican-chorizo-garlic-shrimp',
     price: 18,
     type: 'cheeseburger',
     accessory: 'cheese spread',
@@ -27,7 +27,7 @@ export const products = [
   {
     id: 4,
 
-    firstName: 'Poached',
+    firstName: 'Bacon-Whiskey',
     price: 18,
     type: 'burger',
     accessory: 'sugar-glazed donuts',

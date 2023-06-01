@@ -14,7 +14,7 @@ export default async function SingleProductPage({ params }) {
           data-test-id="product-image"
           src={`/img/${singleProduct.firstName}.jpg`}
           width={500}
-          height={500}
+          height={400}
           className={styles.productImage}
           alt=""
         />

@@ -1,0 +1,22 @@
+/* Navbar.module.css */
+.navbar {
+  background-color: red;
+  padding: 1rem;
+}
+
+.navbarList {
+  list-style-type: none;
+  margin: 100;
+  padding: 100;
+  display: flex;
+}
+
+.navbarItem {
+  margin-right: 500rem;
+}
+
+.navbarLink {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}

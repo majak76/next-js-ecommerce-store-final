@@ -21,9 +21,8 @@ export default async function CartPage() {
       {productInCart.map((products) => {
         return (
           <div key={`product-${products.id}`}>
-            {products.name}
+            {products.firstName}
             {products.price}
-            {products.quality}
           </div>
         );
       })}

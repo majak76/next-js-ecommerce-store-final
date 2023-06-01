@@ -5,7 +5,7 @@ import style from './Navbar';
 const Navbar = () => {
   return (
     <nav className={style.navigator}>
-      <Link href="/">home</Link> <Link href="/products">products</Link>{' '}
+      <Link href="/">Home</Link> <Link href="/products">Products</Link>{' '}
       <Link href="/cart">
         <AiOutlineShoppingCart />
       </Link>
