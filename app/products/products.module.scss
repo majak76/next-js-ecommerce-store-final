@@ -1,5 +1,16 @@
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+.productLink {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.productImage {
+  margin-top: 20px;
 }

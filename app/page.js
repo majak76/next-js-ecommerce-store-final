@@ -5,19 +5,24 @@ import styles from './page.module.scss';
 
 export default function HomePage() {
   return (
-    <>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'left',
-        }}
-      >
-        <Image src="/img/homepage.jpg" width="500" height="300" />
+    <section className={styles.heroSection}>
+      <div className={styles.header}>
+        <div className={styles.heroimage}>
+          <Image
+            src="/img/homepage.jpg"
+            width="500"
+            height="300"
+            className={styles.image}
+          />
+        </div>
+        <h1>Life is too short for self-hatred and celery sticks.</h1>
       </div>
-      <p>Life is too short for self-hatred and celery sticks.</p>
 
-      <input type="button" value="Menu" class="center"></input>
-    </>
+      <Link href="/products" className={styles.menuLink}>
+        {' '}
+        Menu
+      </Link>
+    </section>
   );
 }
 
