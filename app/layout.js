@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <html lang="en">
       <body>
         <div>
-          <Navbar /> <TotalNumber />
+          <Navbar />
           {children}
         </div>
       </body>

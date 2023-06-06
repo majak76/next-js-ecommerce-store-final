@@ -6,7 +6,6 @@ import styles from './products.module.scss';
 export default function ProductsPage() {
   return (
     <main>
-      <h1></h1>
       <div className={styles.container}>
         {products.map((product) => {
           return (

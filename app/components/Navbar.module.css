@@ -1,7 +1,9 @@
 /* Navbar.module.css */
 .navbar {
-  background-color: red;
-  padding: 1rem;
+  background-color: rgb(248, 54, 112);
+  padding: 5px;
+  display: flex;
+  gap: 10rem;
 }
 
 .navbarList {
@@ -15,8 +17,34 @@
   margin-right: 500rem;
 }
 
-.navbarLink {
-  text-decoration: none;
+.navigator {
+  margin: auto;
   color: red;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.linkHome {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: x-large;
+  color: green;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+.linkProducts {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: x-large;
+  color: green;
+  display: flex;
+  justify-content: center;
+}
+.linkCart {
+  width: 60px;
+  height: 60px;
+}
+
+.link {
+  right: 0;
 }
