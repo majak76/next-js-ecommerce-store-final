@@ -1,6 +1,6 @@
 /* Navbar.module.css */
 .navbar {
-  background-color: rgb(248, 54, 112);
+  background-color: white;
   padding: 5px;
   display: flex;
   gap: 10rem;
@@ -18,12 +18,24 @@
 }
 
 .navigator {
+  width: 100%;
   margin: auto;
-  color: red;
+  color: green;
   display: flex;
   justify-content: center;
 }
 
+.navigation {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+}
+.cart {
+  width: 40%;
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
 .linkHome {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: x-large;
@@ -32,6 +44,7 @@
   display: flex;
   justify-content: center;
   margin-right: 30px;
+  text-decoration: none;
 }
 .linkProducts {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -39,12 +52,20 @@
   color: green;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 .linkCart {
   width: 60px;
   height: 60px;
+  margin-left: auto;
+  color: black;
 }
 
 .link {
   right: 0;
+}
+.number {
+  position: absolute;
+  top: 1%;
+  right: 4%;
 }

@@ -31,26 +31,41 @@ export default function CartPage() {
     return { ...product, quantity: matchingProductFromCookie?.quantity };
   });
 
+  const filterforprice = productQuantity.filter(
+    (product) => product.quantity > 0,
+  );
+
+  const onlyPrices = filterforprice.map(
+    (product) => product.quantity * product.price,
+  );
+
+  console.log(onlyPrices);
+
   return (
     <div>
-      {productQuantity.map((product) => {
-        console.log(product);
-        return (
-          <div key={`products-${product.id}`}>
-            <h1></h1>
-            <h3>{product.price}</h3>
-            {product.quantity}
-            <Link href={`/products/${product.id}`}>{product.firstName}</Link>
-            <br />
-            <Image
-              alt={product.firstName}
-              src={`/img/${product.firstName}.jpg`}
-              width={150}
-              height={150}
-            />
-          </div>
-        );
-      })}
+      {productQuantity
+        .filter((product) => product.quantity > 0)
+        .map((product) => {
+          return (
+            <div key={`products-${product.id}`}>
+              <h1></h1>
+              <h3>{product.price}</h3>
+              {product.quantity}
+              <Link href={`/products/${product.id}`}>{product.firstName}</Link>
+              <br />
+              <Image
+                alt={product.firstName}
+                src={`/img/${product.firstName}.jpg`}
+                width={150}
+                height={150}
+              />
+              {product.quantity * product.price}
+            </div>
+          );
+        })}
+      {onlyPrices.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+      )}
     </div>
   );
 }
