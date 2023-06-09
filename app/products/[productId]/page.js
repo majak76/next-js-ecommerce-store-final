@@ -22,7 +22,7 @@ export default async function SingleProductPage({ params }) {
       <div className={styles.productInfoContainer}>
         <h1>{singleProduct.firstName}</h1>
         <h5>{singleProduct.description}</h5>
-        <h6 data-test-id="product-price"> € {singleProduct.price}</h6>
+        <div className={styles.productPrice}data-test-id="product-price"> € {singleProduct.price}</div>
         <p>{singleProduct.text}</p>
         <AddToCart productId={singleProduct.id} />
       </div>

@@ -12,6 +12,6 @@ export function setLocalStorage(key, value) {
 }
 return (
   <main>
-    <div>className= {styles.container}</div>
+    <div></div>
   </main>
 );
