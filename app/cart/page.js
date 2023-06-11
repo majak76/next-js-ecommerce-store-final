@@ -1,12 +1,12 @@
-import QuantityInputField from './QuantityInputField';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProductsById, products } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getQuantity } from '../products/[productId]/actions';
-import styles  from './cart.module.scss';
-import RemoveItem from "./RemoveItem";
+import styles from './cart.module.scss';
+import QuantityInputField from './QuantityInputField';
+import RemoveItem from './RemoveItem';
 
 // const productQuantity = await getQuantity();
 // const productInCart = await Promise.all(
@@ -43,7 +43,7 @@ export default function CartPage() {
   );
 
   console.log(onlyPrices);
-  console.log('WHAT IS PRODUCT: ', productQuantity)
+  console.log('WHAT IS PRODUCT: ', productQuantity);
 
   return (
     <div>
@@ -55,7 +55,10 @@ export default function CartPage() {
               <h1></h1>
               <div>{product.price}</div>
               {product.quantity}
-              <Link href={`/products/${product.id}`}> {product.firstName} </Link>
+              <Link href={`/products/${product.id}`}>
+                {' '}
+                {product.firstName}{' '}
+              </Link>
               <br />
 
               <Image
@@ -66,8 +69,8 @@ export default function CartPage() {
               />
               {product.quantity * product.price}
 
-              <QuantityInputField/>
-              <RemoveItem product={2}/>
+              <QuantityInputField />
+              <RemoveItem id={product.id} />
             </div>
           );
         })}
@@ -75,9 +78,6 @@ export default function CartPage() {
         (accumulator, currentValue) => accumulator + currentValue,
         0,
       )}
-
-
-
     </div>
-)
+  );
 }

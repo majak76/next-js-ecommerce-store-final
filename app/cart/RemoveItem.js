@@ -1,20 +1,19 @@
-"use client"
+'use client';
 
-import {deleteItem} from "./actions";
 import { useRouter } from 'next/navigation';
-export default function RemoveItem({product})
+import { deleteItem } from './actions';
 
-{
+export default function RemoveItem({ id }) {
   const router = useRouter();
 
   return (
     <button
-    formAction={async () => {
-      router.refresh();
-      await deleteItem(product);
-    }}
+      formAction={async () => {
+        router.refresh();
+        await deleteItem(id);
+      }}
     >
       Remove
-      </button>
+    </button>
   );
 }
