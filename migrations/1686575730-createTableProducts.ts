@@ -7,7 +7,7 @@ id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 first_name varchar(30) NOT NULL,
 price varchar(30) NOT NULL,
 type varchar(30) NOT NULL,
-text varchar(40)
+text varchar(800)
 )
 `;
 }
