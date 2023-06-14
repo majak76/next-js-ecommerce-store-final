@@ -10,7 +10,7 @@ export const products = [
   {
     id: 2,
     firstName: 'Ainsworth',
-    price: 17,
+    price: 18,
     type: 'burger',
     text: 'The Mac & Cheese Burger is a thing of pure insanity. It features a panko-crusted mac & cheese patty, topped with a beef patty, topped with more mac & cheese. The cheese makes the patty hard to find, but once beef meets tongue it is a pure bliss. The bun was shockingly able to hold its own against the deluge of melted cheese, noodles and meat..',
   },
@@ -19,14 +19,14 @@ export const products = [
     firstName: 'Mexican-chorizo-garlic-shrimp',
     price: 18,
     type: 'burger',
-    text: "Pimento cheeseburger is a traditional American version of a cheesburger originating from the South, and it's especially popular in South Carolina. It consists of soft burger buns, grilled burger patties, and pimento cheese spread. The pimento spread is made with a base of grated cheddar, mayonnaise, and pimento peppers.Once assembled, the pimento cheeseburger can be eaten as it is, although some people prefer additional toppings such as lettuce, fried onions, or tomatoes, but those are completely optional.",
+    text: "Loaded with creamy guacamole, pickled onions, and spicy cheese, this Mexican chorizo burger is dripping with flavor! The patties are crafted with a blend of beef and chorizo sausage and are perfect for topping with your favorite Mexican flavors.Everyone knows chorizo and shrimp are in love, and there's no reason why this romance wouldn't extend deliciously into the world of burgers. A burger that compromises between land and sea without being wishy-washy.",
   },
   {
     id: 4,
     firstName: 'Bacon-Whiskey',
     price: 18,
     type: 'burger',
-    text: 'Poached burger is an American burger variety originating from Prairie du Chien, Wisconsin, and it’s made at Pete’s Hamburgers, the only place to get this burger. The meat is poached in shallow, hot water because the owner, Pete Gokey once started pouring water on the burgers to keep them moist, as the patties that sat too long would dry out.The water pan in which the meat cooks is filled with sliced onions that flavor the liquid and the patties. Once done, the meat is placed into a bakery roll with a scoop of the onions, and the burgers are usually finished with a squirt of horseradish mustard.',
+    text: " We won't ask for your ID when ordering new Whisky Bacon Burger! This is a busy burger, so hold onto your napkins (at least five) and let's get to eatin'. The burger is placed on top of bacon and caramelized onions, which sear into the patty on a hot flat top grill. Then we get down to business. More bacon, crunchy onions, pepper jack, and a potent potable whisky-infused steak sauce bring this bad boy home.",
   },
 ];
 

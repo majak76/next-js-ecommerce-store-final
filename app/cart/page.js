@@ -50,6 +50,7 @@ export default function CartPage() {
       {productQuantity
         .filter((product) => product.quantity > 0)
         .map((product) => {
+          console.log(product);
           return (
             <div key={`products-${product.id}`}>
               <h1></h1>
@@ -70,7 +71,9 @@ export default function CartPage() {
               {product.quantity * product.price}
 
               <QuantityInputField />
-              <RemoveItem id={product.id} />
+              <form>
+                <RemoveItem product={product} />
+              </form>
             </div>
           );
         })}

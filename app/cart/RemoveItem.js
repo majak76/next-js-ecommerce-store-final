@@ -3,14 +3,14 @@
 import { useRouter } from 'next/navigation';
 import { deleteItem } from './actions';
 
-export default function RemoveItem({ id }) {
+export default function RemoveItem(props) {
   const router = useRouter();
 
   return (
     <button
       formAction={async () => {
         router.refresh();
-        await deleteItem(id);
+        await deleteItem(props.product);
       }}
     >
       Remove
