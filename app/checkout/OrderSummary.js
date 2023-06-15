@@ -1,6 +1,6 @@
 import { getCookieParser } from 'next/dist/server/api-utils';
 import Image from 'next/image';
-import { getProductsById } from '../../database/products';
+import { getProductsById, products } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './checkout.module.scss';
@@ -14,7 +14,8 @@ export const metadata = {
 };
 
 export default async function OrderSummary() {
-  const products = await getProductsById();
+  // const products = await getProductsById();
+  // console.log(products);
   const productQuantityCookie = getCookie('cart');
   const productQuantities = !productQuantityCookie
     ? []
@@ -37,7 +38,7 @@ export default async function OrderSummary() {
   return (
     <div className={styles.summaryContainer}>
       <h1>Order Summary</h1>
-      {productsInCart.map((product) => {
+      {/* {productsInCart.map((product) => {
         subTotal = product.quantity * product.price;
         return (
           <div key={`product-div-${product.id}`} className={styles.summaryCard}>
@@ -63,7 +64,7 @@ export default async function OrderSummary() {
             <div className={styles.subTotal}>€{subTotal}</div>
           </div>
         );
-      })}
+      })} */}
       <div className={styles.grandTotal}>
         <div>
           <p>Sub total:</p>

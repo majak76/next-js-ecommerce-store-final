@@ -1,3 +1,24 @@
+import { cache } from 'react';
+import { sql } from './connect';
+
+export const getProducts = cache(async () => {
+  const products = await sql`SELECT * FROM products`;
+  return products;
+});
+
+export const getProductById = cache(async (id) => {
+  const products = await sql`
+    SELECT
+      *
+    FROM
+      products
+    WHERE
+      id = ${id}
+  `;
+
+  return products[0];
+});
+
 // This data is now coming from the database
 export const products = [
   {

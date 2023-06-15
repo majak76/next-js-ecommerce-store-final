@@ -53,7 +53,6 @@ export default function CartPage() {
           console.log(product);
           return (
             <div key={`products-${product.id}`}>
-              <h1></h1>
               <div>Price: {product.price}</div>
 
               <Link
@@ -89,7 +88,7 @@ export default function CartPage() {
         (accumulator, currentValue) => accumulator + currentValue,
         0,
       )} */}
-      <Link href="/checkout" />
+      <Link href="/checkout"> Checkout</Link>
     </div>
   );
 }
