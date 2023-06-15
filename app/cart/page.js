@@ -54,11 +54,14 @@ export default function CartPage() {
           return (
             <div key={`products-${product.id}`}>
               <h1></h1>
-              <div>{product.price}</div>
-              {product.quantity}
-              <Link href={`/products/${product.id}`}>
+              <div>Price: {product.price}</div>
+
+              <Link
+                className={styles.productName}
+                href={`/products/${product.id}`}
+              >
                 {' '}
-                {product.firstName}{' '}
+                Product name: {product.firstName}{' '}
               </Link>
               <br />
 
@@ -68,19 +71,25 @@ export default function CartPage() {
                 width={150}
                 height={150}
               />
-              {product.quantity * product.price}
+              <div>Product quantity: {product.quantity}</div>
 
-              <QuantityInputField />
+              <div>Total price: {product.quantity * product.price}</div>
+
+              <div>
+                {' '}
+                Product quantity: <QuantityInputField />{' '}
+              </div>
               <form>
                 <RemoveItem product={product} />
               </form>
             </div>
           );
         })}
-      {onlyPrices.reduce(
+      {/* {onlyPrices.reduce(
         (accumulator, currentValue) => accumulator + currentValue,
         0,
-      )}
+      )} */}
+      <Link href="/checkout" />
     </div>
   );
 }

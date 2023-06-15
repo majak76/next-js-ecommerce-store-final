@@ -1,9 +1,14 @@
+import styles from './checkout.module.scss';
+import CheckOutForm from './CheckOutForm';
+import OrderSummary from './OrderSummary';
+
+export const dynamic = 'force-dynamic';
+
 export default function CheckoutPage() {
   return (
-    <main>
-      <div>
-        <h1>Checkout</h1>
-      </div>
+    <main className={styles.checkoutContainer}>
+      <CheckOutForm />
+      <OrderSummary />
     </main>
   );
 }
