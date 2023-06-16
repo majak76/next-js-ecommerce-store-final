@@ -13,10 +13,13 @@
     "Home.module.css": "link:..\\styles\\Home.module.css",
     "dotenv-cli": "^7.2.1",
     "dotenv-safe": "^8.2.0",
+    "global": "^4.4.0",
     "ley": "^0.8.1",
+    "media": "^0.2.1",
     "next": "13.4.3",
     "next-js-eccomerce-store-project1": "link:",
     "postgres": "^3.3.5",
+    "queries": "^0.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.9.0",
@@ -28,8 +31,8 @@
     "tsm": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.6",
     "@types/dotenv-safe": "^8.1.2",
+    "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "eslint-config-upleveled": "^4.5.1",
     "stylelint": "^15.6.2",

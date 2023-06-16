@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './checkout.module.scss';
 import CheckOutForm from './CheckOutForm';
 import OrderSummary from './OrderSummary';

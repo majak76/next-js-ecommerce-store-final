@@ -165,7 +165,7 @@ export default function CheckOutForm() {
         formAction={async () => {
           await clearCookies();
           router.refresh();
-          router.push('/cart/checkout/thankYou');
+          router.push('/thankyou');
         }}
         disabled={
           firstName.length === 0 ||
