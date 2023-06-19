@@ -7,8 +7,6 @@ import { getSafeReturnToPath } from '../../../util/validation';
 import { LoginResponseBodyPost } from '../../api/(auth)/login/route';
 import styles from './LoginForm.module.scss';
 
-import { getSafeReturnToPath}
-
 type Props = { returnTo?: string | string[] };
 
 export default function LoginForm(props: Props) {

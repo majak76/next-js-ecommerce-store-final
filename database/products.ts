@@ -1,4 +1,5 @@
 import { cache } from 'react';
+import { User } from '../migrations/1687177508-createUsers';
 import { sql } from './connect';
 
 export const getProducts = cache(async () => {
@@ -6,7 +7,7 @@ export const getProducts = cache(async () => {
   return products;
 });
 
-export const getProductById = cache(async (id) => {
+export const getProductById = cache(async (id: number) => {
   const products = await sql`
     SELECT
       *
@@ -18,6 +19,23 @@ export const getProductById = cache(async (id) => {
 
   return products[0];
 });
+
+export const createProduct = cache(
+  async (username: string, passwordHash: string) => {
+    console.log(passwordHash);
+    const [product] = await sql<User[]>`
+    INSERT INTO products
+      (username, password_has h)
+    VALUES
+      (${username.toLowerCase()}, ${passwordHash})
+    RETURNING
+      id,
+      username
+ `;
+
+    return product;
+  },
+);
 
 // This data is now coming from the database
 export const products = [
