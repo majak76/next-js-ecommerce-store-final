@@ -70,3 +70,19 @@
   right: 3%;
   font-weight: bold;
 }
+
+.linkLogIn {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  display: flex;
+  gap: 50rem;
+}
+
+.linkRegister {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  display: flex;
+  gap: 50rem;
+}

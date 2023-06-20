@@ -1,6 +1,7 @@
 import 'server-only';
 import { config } from 'dotenv-safe';
-import postgres from 'postgres';
+import { headers } from 'next/headers';
+import postgres, { Sql } from 'postgres';
 
 if (!process.env.POSTGRES_URL) {
   config();
