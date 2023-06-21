@@ -1,6 +1,6 @@
 import { getCookieParser } from 'next/dist/server/api-utils';
 import Image from 'next/image';
-import { getProductsById, products } from '../../database/products';
+import { getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './checkout.module.scss';
@@ -14,7 +14,7 @@ export const metadata = {
 };
 
 export default async function OrderSummary() {
-  // const products = await getProductsById();
+  const products = await getProducts();
   // console.log(products);
   const productQuantityCookie = getCookie('cart');
   const productQuantities = !productQuantityCookie

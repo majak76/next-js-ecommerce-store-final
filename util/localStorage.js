@@ -10,8 +10,8 @@ export function setLocalStorage(key, value) {
     window.localStorage.setItem(key, value);
   }
 }
-return (
-  <main>
-    <div></div>
-  </main>
-);
+// return (
+//   <main>
+//     <div></div>
+//   </main>
+// );

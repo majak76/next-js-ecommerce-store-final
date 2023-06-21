@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Navbar from './components/Navbar';
-import { LogoutButton } from './LogoutButton';
 import TotalNumber from './totalnumber';
 
 const Layout = ({ children }) => {
@@ -10,7 +9,6 @@ const Layout = ({ children }) => {
         <div>
           <Navbar />
 
-          <LogoutButton />
 
           {children}
         </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getProductsById, products } from '../../database/products';
+import { getProducts, getProductsById } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import { getQuantity } from '../products/[productId]/actions';
@@ -14,7 +14,7 @@ import RemoveItem from './RemoveItem';
 export const dynamic = 'force-dynamic';
 
 export default async function CartPage() {
-  // const products = await getProductsById();
+  const products = await getProducts();
   const productQuantityCookie = getCookie('cart');
   const productQuantities = !productQuantityCookie
     ? []
@@ -32,10 +32,7 @@ export default async function CartPage() {
           <div className={styles.cartOverviewContainer}>
             <div className={styles.cartTableHead}></div>
 
-            <div
-              className={styles.itemsInCart}
-              data-test-id={`cart-product-${products.id}`}
-            >
+            <div className={styles.itemsInCart}>
               {productsInCart.map((product) => {
                 let subTotal = 0;
                 subTotal = product.quantity * product.price;
@@ -54,7 +51,10 @@ export default async function CartPage() {
                         alt={product.name}
                       />
                     </div>
-                    <Link className={styles.productFirstName} href={`/products/${product.id}`}>
+                    <Link
+                      className={styles.productFirstName}
+                      href={`/products/${product.id}`}
+                    >
                       {product.firstName}
                     </Link>
                     <p>€ {product.price}</p>
