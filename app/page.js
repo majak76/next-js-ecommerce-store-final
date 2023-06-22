@@ -9,7 +9,7 @@ export default function HomePage() {
       <div className={styles.header}>
         <div className={styles.heroimage}>
           <Image
-            src="/img/homepage.jpg"
+            src="/img/homepageImage.jpg"
             width="500"
             height="300"
             className={styles.image}
