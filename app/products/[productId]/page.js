@@ -12,7 +12,7 @@ export default async function SingleProductPage({ params }) {
       <div>
         <Image
           data-test-id="product-image"
-          src={`/img/${singleProduct.firstName}.jpg`}
+          src={`/images/${singleProduct.firstName}.jpg`}
           width={500}
           height={400}
           className={styles.productImage}
