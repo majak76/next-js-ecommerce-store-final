@@ -23,6 +23,7 @@ export default async function ProductsPage() {
                 src={`/img/${product.firstName}.jpg`}
                 width={150}
                 height={150}
+                priority
               />
               <p> {product.text}</p>
             </div>
