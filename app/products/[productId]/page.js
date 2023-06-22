@@ -7,16 +7,18 @@ export const dynamic = 'force-dynamic';
 export default async function SingleProductPage({ params }) {
   const singleProduct = await getProductById(Number(params.productId));
 
+  console.log('singleProduct.firstName', singleProduct.firstName);
+  console.log('singleProduct.firstName', singleProduct.firstName);
   return (
     <section className={styles.productContainer}>
       <div>
         <Image
           data-test-id="product-image"
-          src={`/images/${singleProduct.firstName}.jpg`}
+          src={`/img/${singleProduct.firstName}.jpg`}
           width={500}
           height={400}
           className={styles.productImage}
-          alt=""
+          alt="burger"
         />
       </div>
       <div className={styles.productInfoContainer}>
