@@ -17,7 +17,7 @@ export const products = [
   },
   {
     id: 3,
-    firstName: 'Mexican-chorizo-garlic-shrimp',
+    firstName: 'Chicken-Burger',
     price: 18,
     type: 'burger',
     text: "Pimento cheeseburger is a traditional American version of a cheesburger originating from the South, and it's especially popular in South Carolina. It consists of soft burger buns, grilled burger patties, and pimento cheese spread. The pimento spread is made with a base of grated cheddar, mayonnaise, and pimento peppers.Once assembled, the pimento cheeseburger can be eaten as it is, although some people prefer additional toppings such as lettuce, fried onions, or tomatoes, but those are completely optional.",
