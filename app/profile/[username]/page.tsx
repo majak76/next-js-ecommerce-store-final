@@ -1,5 +1,13 @@
-import { notFound } from 'next/navigation';
-import { getUserByUsername } from '../../../database/users';
+import { cookies } from 'next/headers';
+import Link from 'next/link';
+import { notFound, redirect } from 'next/navigation';
+import { logout } from '../../(auth)/logout/actions';
+import { getValidSessionByToken } from '../../../database/sessions';
+import {
+  getUserBySessionToken,
+  getUserByUsername,
+} from '../../../database/users';
+import { LogoutButton } from '../../LogoutButton';
 
 type Props = {
   params: { username: string };
@@ -11,11 +19,41 @@ export default async function ProfileUsernamePage({ params }: Props) {
   if (!user) {
     notFound();
   }
-
+  const sessionTokenCookie = cookies().get('sessionToken');
+  const session =
+    sessionTokenCookie &&
+    (await getValidSessionByToken(sessionTokenCookie.value));
+  if (!session) redirect('/login');
+  const cookieStore = cookies();
+  const sessionToken = cookieStore.get('sessionToken');
+  const userIsThere = !sessionToken?.value
+    ? undefined
+    : await getUserBySessionToken(sessionToken.value);
   return (
     <>
+      <div />
+      <div>
+        {userIsThere ? (
+          <>
+            <div>Username: {userIsThere.username}</div>
+            <div>id: {user.id}</div>
+            {/* <LogoutButton logout={logout} /> */}
+          </>
+        ) : (
+          <>
+            <Link href="/register">register</Link>
+            <Link href="/login">login</Link>
+          </>
+        )}
+      </div>
+    </>
+  );
+}
+{
+  /*
       <div>id: {user.id}</div>
       <div>username: {user.username}</div>
     </>
   );
+} */
 }

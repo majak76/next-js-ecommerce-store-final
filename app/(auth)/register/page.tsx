@@ -8,11 +8,12 @@ export default async function RegisterPage() {
 
   // 1. Check if the sessionToken cookie exit
   const sessionTokenCookie = cookies().get('sessionToken');
+
   // 2. check if the sessionToken has a valid session
   const session =
     sessionTokenCookie &&
     (await getValidSessionByToken(sessionTokenCookie.value));
-
+  console.log(session);
   // 3. Either redirect or render the login form
   if (session) redirect('/');
   return <RegisterForm />;

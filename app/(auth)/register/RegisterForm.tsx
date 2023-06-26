@@ -8,13 +8,14 @@ import styles from './RegisterForm.module.scss';
 export default function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
 
   async function register() {
     const response = await fetch('/api/register', {
       method: 'POST',
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password, email }),
     });
 
     const data: RegisterResponseBodyPost = await response.json();
@@ -42,9 +43,15 @@ export default function RegisterForm() {
       <label>
         password:
         <input
-          type="password"
           value={password}
           onChange={(event) => setPassword(event.currentTarget.value)}
+        />
+      </label>
+      <label>
+        e-mail:
+        <input
+          value={email}
+          onChange={(event) => setEmail(event.currentTarget.value)}
         />
       </label>
       <button className={styles.button} onClick={async () => await register()}>

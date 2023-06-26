@@ -66,9 +66,14 @@
 }
 .number {
   position: absolute;
-  top: -8%;
+  top: -5%;
   right: 3%;
   font-weight: bold;
+}
+@media screen and (max-width: 375px) {
+  .number {
+    margin-left: -20px;
+  }
 }
 
 .linkLogIn {

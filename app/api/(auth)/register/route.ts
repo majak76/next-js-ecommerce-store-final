@@ -21,6 +21,7 @@ export type RegisterResponseBodyPost =
 const userSchema = z.object({
   username: z.string().min(1),
   password: z.string().min(1),
+  email: z.string().min(1),
 });
 
 export async function POST(
@@ -58,7 +59,11 @@ export async function POST(
   const passwordHash = await bcrypt.hash(result.data.password, 10);
 
   // 4. store the credentials in the db
-  const newUser = await createUser(result.data.username, passwordHash);
+  const newUser = await createUser(
+    result.data.username,
+    passwordHash,
+    result.data.email,
+  );
 
   if (!newUser) {
     // zod send you details about the error
