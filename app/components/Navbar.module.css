@@ -1,4 +1,6 @@
 /* Navbar.module.css */
+/* @import './../globalMediaQueries'; */
+
 .navbar {
   background-color: white;
   padding: 5px;
@@ -30,6 +32,7 @@
   display: flex;
   justify-content: end;
 }
+
 .cart {
   width: 40%;
   display: flex;

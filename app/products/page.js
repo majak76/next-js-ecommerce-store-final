@@ -25,7 +25,7 @@ export default async function ProductsPage() {
                 height={150}
                 priority
               />
-              <p> {product.text}</p>
+              <p>{product.text}</p>
             </div>
           );
         })}
