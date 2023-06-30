@@ -41,6 +41,7 @@ const Navbar = async () => {
           </>
         )}
       </div>
+
       <div className={style.cart}>
         <Link className={style.link} href="/cart">
           <AiOutlineShoppingCart className={style.linkCart} />

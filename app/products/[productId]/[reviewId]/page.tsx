@@ -7,6 +7,7 @@ import { getUserBySessionToken } from '../../../../database/users';
 import { quicksand } from '../../../../util/fonts';
 import style from './page.module.scss';
 import ReviewForm from './ReviewForm';
+import styles from './ReviewForm.module.scss';
 
 export const metadata = {
   title: 'Single Product Page',
@@ -59,7 +60,7 @@ export default async function ReviewPage(props: Props) {
           </h4>
         </div>
       </section>
-      <div className={style.rating}>
+      <div className={styles.rating}>
         <span className={quicksand.className}>Rate this product</span>
         <span>RATING STARS</span>
       </div>

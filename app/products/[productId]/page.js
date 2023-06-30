@@ -8,6 +8,7 @@ import {
 } from '../../../database/reviews';
 import { getValidSessionByToken } from '../../../database/sessions';
 import { getUserBySessionToken } from '../../../database/users';
+import { poppins, quicksand, raleway } from '../../../util/fonts';
 import StarRating from '../../RatingStars';
 import AddToCart from './AddToCart';
 import styles from './product.module.scss';
@@ -16,26 +17,18 @@ export const dynamic = 'force-dynamic';
 
 export default async function SingleProductPage({ params }) {
   const sessionTokenCookie = cookies().get('sessionToken');
+  const product = await getProductById(Number(params.productId));
 
-  // export default async function ProductPage(props: Props) {
-  //   const product = await getProductById(Number(props.params.productId));
+  if (!product) {
+    notFound();
+  }
+  const reviews = await getReviewsWithUsername(Number(params.productId));
+  // console.log('reviews', reviews);
+  const allreviews = await getReviewsByProductId(Number(params.productId));
+  const ratings = allreviews.map((review) => review.rating);
 
-  //   if (!product) {
-  //     notFound();
-  //   }
-
-  // const reviews = await getReviewsWithUsername(Number(props.params.productId));
-  // // console.log('reviews', reviews);
-  // const allreviews = await getReviewsByProductId(
-  //   Number(props.params.productId),
-  // );
-
-  // const ratings = allreviews.map((review) => review.rating);
-
-  // const sum = ratings.reduce((total, rating) => total + rating, 0);
-  // const averageRating = sum / ratings.length;
-
-  // const sessionTokenCookie = cookies().get('sessionToken');
+  const sum = ratings.reduce((total, rating) => total + rating, 0);
+  const averageRating = sum / ratings.length;
 
   // 2. check if the sessionToken has a valid session const user = sessionTokenCookie &&
 
