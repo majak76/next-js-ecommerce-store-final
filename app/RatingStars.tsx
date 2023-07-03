@@ -1,24 +1,93 @@
+'use client';
+import { useEffect, useState } from 'react';
+import Star from './Star';
+
 type Props = {
-  rating: number;
+  productId: number;
+  userId: number;
 };
 
-export default function StarRating({ rating }: Props) {
-  const filledStars = Math.floor(rating);
-  const hasHalfStar = rating - filledStars >= 0.5;
+// The complete StarRating component
 
-  const stars = [];
-  for (let i = 0; i < filledStars; i++) {
-    stars.push(<span key={`star-${i}`}>★</span>);
+export default function StarRating({ productId, userId }: Props) {
+  const [starValue, setStarValue] = useState<number>();
+  const [productIdValue, setProductIdValue] = useState<number>();
+
+  // Sending the Star Rating information to the API
+  async function sendRatingToBackEnd() {
+    await fetch('/api/reviews', {
+      method: 'POST',
+      body: JSON.stringify({
+        productIdValue,
+        starValue,
+        userId,
+      }),
+    });
   }
 
-  if (hasHalfStar) {
-    stars.push(<span key="star-half">½</span>);
-  }
+  useEffect(() => {
+    if (starValue && productIdValue) {
+      sendRatingToBackEnd().catch((error) => console.log(error));
 
-  const emptyStars = 5 - stars.length;
-  for (let i = 0; i < emptyStars; i++) {
-    stars.push(<span key={`star-empty-${i}`}>☆</span>);
-  }
+      // This is the start of a code that should not be your concern
 
-  return <div>{stars}</div>;
+      // This is the end of code that should not be your concern
+    }
+  }, [starValue, productIdValue]);
+
+  return (
+    <div>
+      {/* This is how the five stars that shows are being created */}
+      {Array.from(Array(5)).map((key, i) => {
+        const starValueIndex = i + 1;
+        return (
+          <button
+            key={key}
+            onClick={async (event) => {
+              event.preventDefault();
+              setStarValue(starValueIndex);
+              setProductIdValue(productId);
+            }}
+          >
+            {/* You can change these colors to what you want */}
+            <Star fillColor={starValue! >= starValueIndex ? 'red' : 'green'} />
+          </button>
+        );
+      })}
+      {/* Start of the code that should not be your concern */}
+      {/* <br />
+      <h4>Three values to send to database</h4>
+      <p>Star Value: {starValue}</p>
+      <p>Product Id: {productIdValue}</p>
+      <p>User Id: {userId}</p>
+      <br /> */}
+
+      {/* End of the code that should not be your concern */}
+    </div>
+  );
 }
+
+// type Props = {
+//   rating: number;
+// };
+
+// export default function StarRating({ rating }: Props) {
+//   const filledStars = Math.floor(rating);
+//   const hasHalfStar = rating - filledStars >= 0.5;
+
+//   const stars = [];
+//   for (let i = 0; i < filledStars; i++) {
+//     stars.push(<span key={`star-${i}`}>★</span>);
+//   }
+
+//   if (hasHalfStar) {
+//     stars.push(<span key="star-half">½</span>);
+//   }
+
+//   const emptyStars = 5 - stars.length;
+//   for (let i = 0; i < emptyStars; i++) {
+//     stars.push(<span key={`star-empty-${i}`}>☆</span>);
+//   }
+
+//   return <div>{stars}</div>;
+// }

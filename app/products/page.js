@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -5,6 +6,7 @@ import {
   getProductsWithLimitAndOffsetBySessionToken,
 } from '../../database/products';
 import { getReviews } from '../../database/reviews';
+import { getUserBySessionToken } from '../../database/users';
 import { poppins, quicksand } from '../../util/fonts';
 import StarRating from '../RatingStars';
 import styles from './products.module.scss';
@@ -12,10 +14,17 @@ import styles from './products.module.scss';
 export const dynamic = 'force-dynamic';
 
 export default async function ProductsPage() {
+  // 1. get the session token from the cookie
+  const cookieStore = cookies();
+  const sessionToken = cookieStore.get('sessionToken');
+
+  const user = !sessionToken?.value
+    ? undefined
+    : await getUserBySessionToken(sessionToken.value);
   const products = await getProducts();
   const reviews = await getReviews();
   console.log('reviews', reviews);
-
+  console.log(user);
   return (
     <main>
       <div className={styles.container}>
@@ -33,7 +42,7 @@ export default async function ProductsPage() {
             <div key={`product-div-${product.id}`}>
               {/* <StarRating /> */}
               <div className={styles.ratingAndPrice} />
-              <StarRating rating={averageRating} />
+              <StarRating productId={product.id} userId={user?.id} />
               <span className={`${quicksand.className} ${styles.price}`}>
                 {product.price}€
               </span>

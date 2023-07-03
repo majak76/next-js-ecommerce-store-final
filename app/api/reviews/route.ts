@@ -14,9 +14,9 @@ export type ReviewResponseBodyPost =
 
 const reviewSchema = z.object({
   userId: z.number(),
-  comment: z.string().min(1),
-  productId: z.number(),
-  rating: z.number().optional(),
+  comment: z.string().min(1).optional(),
+  productIdValue: z.number(),
+  starValue: z.number().optional(),
 });
 
 export async function POST(
@@ -43,9 +43,9 @@ export async function POST(
   // query the database to get all the animals
   const review = await submitReview(
     result.data.userId,
-    result.data.comment,
-    result.data.productId,
-    result.data.rating,
+    result.data.comment || 'testing comment',
+    result.data.productIdValue,
+    result.data.starValue,
   );
 
   if (!review) {
