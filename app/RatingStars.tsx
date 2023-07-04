@@ -1,5 +1,7 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { submitReview } from '../database/reviews';
 import Star from './Star';
 
 type Props = {
@@ -12,7 +14,7 @@ type Props = {
 export default function StarRating({ productId, userId }: Props) {
   const [starValue, setStarValue] = useState<number>();
   const [productIdValue, setProductIdValue] = useState<number>();
-
+  const router = useRouter();
   // Sending the Star Rating information to the API
   async function sendRatingToBackEnd() {
     await fetch('/api/reviews', {
@@ -23,6 +25,11 @@ export default function StarRating({ productId, userId }: Props) {
         userId,
       }),
     });
+  }
+  function checkUserLogIn() {
+    if (!userId) {
+      router.push('/login');
+    }
   }
 
   useEffect(() => {
@@ -45,12 +52,16 @@ export default function StarRating({ productId, userId }: Props) {
             key={key}
             onClick={async (event) => {
               event.preventDefault();
+              checkUserLogIn();
               setStarValue(starValueIndex);
               setProductIdValue(productId);
+              // await submitReview(userId, String(productId), starValueIndex);
             }}
           >
             {/* You can change these colors to what you want */}
-            <Star fillColor={starValue! >= starValueIndex ? 'red' : 'green'} />
+            <Star
+              fillColor={starValue! >= starValueIndex ? '#D5AB55' : 'green'}
+            />
           </button>
         );
       })}

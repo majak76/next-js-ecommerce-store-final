@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import { notFound, redirect } from 'next/navigation';
+import { products } from '../../../data';
 import { getProductById } from '../../../database/products';
 import {
   getReviewsByProductId,
@@ -50,7 +51,7 @@ export default async function SingleProductPage({ params }) {
   // !user ? '' : <AddToCart />;
   return (
     <section className={styles.productContainer}>
-      <StarRating />
+      <StarRating productId={product.id} userId={user?.id} />
       <div>
         <Image
           data-test-id="product-image"

@@ -1,12 +1,17 @@
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
+import { notFound, redirect } from 'next/navigation';
+// import { getProductById } from '../../database/products';
+// import { products } from '../../data';
 import {
   getProducts,
   getProductsWithLimitAndOffsetBySessionToken,
 } from '../../database/products';
 import { getReviews } from '../../database/reviews';
+import { getValidSessionByToken } from '../../database/sessions';
 import { getUserBySessionToken } from '../../database/users';
+// import { getUserBySessionToken } from '../../database/users';
 import { poppins, quicksand } from '../../util/fonts';
 import StarRating from '../RatingStars';
 import styles from './products.module.scss';
@@ -14,7 +19,8 @@ import styles from './products.module.scss';
 export const dynamic = 'force-dynamic';
 
 export default async function ProductsPage() {
-  // 1. get the session token from the cookie
+  // // 1. get the session token from the cookie
+  const sessionTokenCookie = cookies().get('sessionToken');
   const cookieStore = cookies();
   const sessionToken = cookieStore.get('sessionToken');
 
@@ -25,6 +31,14 @@ export default async function ProductsPage() {
   const reviews = await getReviews();
   console.log('reviews', reviews);
   console.log(user);
+  const session =
+    sessionTokenCookie &&
+    (await getValidSessionByToken(sessionTokenCookie.value));
+  // 3. Either redirect or render the login form if (!session)
+
+  // if (!session) {
+  //   redirect(`/login?returnTo=/products/${singleProduct.id}`);
+  // }
   return (
     <main>
       <div className={styles.container}>
@@ -61,7 +75,8 @@ export default async function ProductsPage() {
                 height={150}
                 priority
               />
-              <p>{product.text}</p>
+
+              {/* <p>{product.text}</p> */}
             </div>
           );
         })}
