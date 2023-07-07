@@ -13,6 +13,7 @@ import { getValidSessionByToken } from '../../database/sessions';
 import { getUserBySessionToken } from '../../database/users';
 // import { getUserBySessionToken } from '../../database/users';
 import { poppins, quicksand } from '../../util/fonts';
+import FixStarRating from '../FixStarRating';
 import StarRating from '../RatingStars';
 import styles from './products.module.scss';
 
@@ -29,7 +30,7 @@ export default async function ProductsPage() {
     : await getUserBySessionToken(sessionToken.value);
   const products = await getProducts();
   const reviews = await getReviews();
-  console.log('reviews', reviews);
+  console.log('hello', reviews);
   console.log(user);
   const session =
     sessionTokenCookie &&
@@ -39,6 +40,7 @@ export default async function ProductsPage() {
   // if (!session) {
   //   redirect(`/login?returnTo=/products/${singleProduct.id}`);
   // }
+
   return (
     <main>
       <div className={styles.container}>
@@ -49,14 +51,26 @@ export default async function ProductsPage() {
           const ratings = productReview.map((review) => review.rating);
           console.log('ratings', ratings);
           const sum = ratings.reduce((total, rating) => total + rating, 0);
-          const averageRating = sum / ratings.length;
-          console.log('average rating', averageRating);
+          const averageRating = Math.round((sum / ratings.length) * 10) / 10;
+          // const averageRating = sum / ratings.length;
+          console.log(
+            'average rating',
+            averageRating,
+            'for product',
+            product.id,
+          );
+
+          //         const sum = ratings.reduce((total, rating) => total + rating, 0);
+          // const averageRating = Math.round((sum / ratings.length) * 10) / 10;
 
           return (
             <div key={`product-div-${product.id}`}>
               {/* <StarRating /> */}
               <div className={styles.ratingAndPrice} />
-              <StarRating productId={product.id} userId={user?.id} />
+              {/* <StarRating productId={product.id} userId={user?.id} /> */}
+              <FixStarRating rating={averageRating} />
+              {/* <StarRating rating={averageRating} /> */}
+              <span> {averageRating} </span>
               <span className={`${quicksand.className} ${styles.price}`}>
                 {product.price}€
               </span>

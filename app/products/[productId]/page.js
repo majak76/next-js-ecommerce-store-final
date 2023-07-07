@@ -4,8 +4,10 @@ import { notFound, redirect } from 'next/navigation';
 import { products } from '../../../data';
 import { getProductById } from '../../../database/products';
 import {
+  getReviewById,
+  getReviews,
   getReviewsByProductId,
-  getReviewsWithUsername,
+  submitReview,
 } from '../../../database/reviews';
 import { getValidSessionByToken } from '../../../database/sessions';
 import { getUserBySessionToken } from '../../../database/users';
@@ -23,7 +25,7 @@ export default async function SingleProductPage({ params }) {
   if (!product) {
     notFound();
   }
-  const reviews = await getReviewsWithUsername(Number(params.productId));
+  const reviews = await Number(params.productId);
   // console.log('reviews', reviews);
   const allreviews = await getReviewsByProductId(Number(params.productId));
   const ratings = allreviews.map((review) => review.rating);

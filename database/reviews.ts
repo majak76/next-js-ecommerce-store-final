@@ -49,7 +49,7 @@ export const getReviews = cache(async () => {
 export const getReviewById = cache(async (id: number) => {
   const [review] = await sql<ReviewSubmit[]>`
     SELECT
-      *
+     reviews. *
     FROM
       reviews
     WHERE
@@ -148,4 +148,15 @@ export const getReviewsByUser = cache(async (username: string) => {
   `;
 
   return reviewsWithUsername;
+});
+
+export const deleteReviewById = cache(async (id: number) => {
+  const [review] = await sql<ReviewSubmit[]>`
+    DELETE FROM
+      reviews
+    WHERE
+      id = ${id}
+    RETURNING *
+ `;
+  return review;
 });

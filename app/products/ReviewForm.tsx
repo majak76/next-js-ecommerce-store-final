@@ -1,8 +1,8 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { poppins, quicksand, raleway } from '../../../../util/fonts';
-import { ReviewResponseBodyPost } from '../../../api/reviews/route';
+import { poppins, quicksand, raleway } from '../../util/fonts';
+import { ReviewResponseBodyPost } from '../api/reviews/route';
 import style from './ReviewForm.module.scss';
 
 type Props = {

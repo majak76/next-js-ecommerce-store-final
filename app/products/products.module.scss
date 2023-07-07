@@ -30,6 +30,9 @@
 .productImage {
   margin-top: 20px;
 }
-.productDescription {
-  margin-top: 10px;
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
