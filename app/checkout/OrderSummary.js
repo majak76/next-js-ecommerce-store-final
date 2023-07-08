@@ -1,6 +1,5 @@
-import { getCookieParser } from 'next/dist/server/api-utils';
 import Image from 'next/image';
-import { getProducts } from '../../database/products';
+import { getProductById, getProducts } from '../../database/products';
 import { getCookie } from '../../util/cookies';
 import { parseJson } from '../../util/json';
 import styles from './checkout.module.scss';
@@ -8,14 +7,12 @@ import styles from './checkout.module.scss';
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-  title: {
-    default: 'Life is too short for self-hatred and celery sticks.',
-  },
+  title: { default: 'Vida | Handmade Jewellery' },
+  description: 'Dedicated for best quality handmade jewellery',
 };
 
 export default async function OrderSummary() {
   const products = await getProducts();
-  // console.log(products);
   const productQuantityCookie = getCookie('cart');
   const productQuantities = !productQuantityCookie
     ? []
@@ -35,15 +32,17 @@ export default async function OrderSummary() {
     0,
   );
 
-  {
-    /* {productsInCart.map((product) => {
+  return (
+    <div className={styles.summaryContainer}>
+      <h1>Order Summary</h1>
+      {productsInCart.map((product) => {
         subTotal = product.quantity * product.price;
         return (
           <div key={`product-div-${product.id}`} className={styles.summaryCard}>
             <div className={styles.leftSide}>
               <div>
                 <Image
-                  src={`/images/products/${product.name}.avif`}
+                  src={`/img/${product.name}.jpg`}
                   width={60}
                   height={60}
                   alt={product.name}
@@ -62,19 +61,17 @@ export default async function OrderSummary() {
             <div className={styles.subTotal}>€{subTotal}</div>
           </div>
         );
-      })} */
-  }
-  return (
-    <div className={styles.summaryContainer}>
-      <h1>Order Summary</h1>
+      })}
       <div className={styles.grandTotal}>
         <div>
-          <p>Sub total: €{totalPrice} </p>
-          <p>Shipping: free</p>
+          <p>Sub total:</p>
+          <p>Shipping:</p>
           <h3>Total</h3>
         </div>
 
         <div>
+          <p>€{totalPrice}</p>
+          <p>free</p>
           <h3>€{totalPrice}</h3>
         </div>
       </div>
