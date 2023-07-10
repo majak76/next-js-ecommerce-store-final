@@ -16,13 +16,20 @@ export default function Home() {
             className={styles.image}
           />
         </div>
-        <h1>Life is too short for self-hatred and celery sticks.</h1>
-      </div>
+        <div>
+          <h1>Life is too short for self-hatred and celery sticks.</h1>
+        </div>
+        <p>
+          Try some of the craziest burger combos on earth. The richness of the
+          ingredients and the explosion of flavor in just one bite will make you
+          question everything you've eaten so far.{' '}
+        </p>
 
-      <Link href="/products" className={styles.menuLink}>
-        {' '}
-        Menu
-      </Link>
+        <Link href="/products" className={styles.menuLink}>
+          {' '}
+          Menu
+        </Link>
+      </div>
     </section>
   );
 }

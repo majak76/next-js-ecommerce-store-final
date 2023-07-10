@@ -9,7 +9,7 @@ $desktop: 1280px;
 
 .heroSection {
   height: 100vh;
-  background-color: black;
+  background-color: #1b1212;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@ $desktop: 1280px;
       height: 495px;
     }
     .image {
-      border-radius: 10px;
+      border-radius: 15px;
     }
     @media screen and (max-width: $desktop) {
       top: 55%;
@@ -78,6 +78,15 @@ $desktop: 1280px;
 
     h1 {
       color: white;
+      font-family: var(--title-font);
+      font-size: 35px;
+      margin-bottom: 24px;
+    }
+    p {
+      color: white;
+      font-size: 20px;
+      line-height: 1, 5;
+      margin-bottom: 10px;
     }
   }
   @media screen and (max-width: $laptop) {
