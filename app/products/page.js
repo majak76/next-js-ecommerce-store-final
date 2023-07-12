@@ -70,7 +70,7 @@ export default async function ProductsPage() {
               {/* <StarRating productId={product.id} userId={user?.id} /> */}
               <FixStarRating rating={averageRating} />
               {/* <StarRating rating={averageRating} /> */}
-              <span> {averageRating} </span>
+              {!isNaN(averageRating) && <span> {averageRating} </span>}
               <span className={`${quicksand.className} ${styles.price}`}>
                 {product.price}€
               </span>

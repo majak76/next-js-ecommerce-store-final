@@ -42,16 +42,14 @@ export default async function OrderSummary() {
             <div className={styles.leftSide}>
               <div>
                 <Image
-                  src={`/img/${product.name}.jpg`}
+                  src={`/img/${product.firstName}.jpg`}
                   width={60}
                   height={60}
-                  alt={product.name}
+                  alt={product.firstName}
                 />
               </div>
               <div className={styles.infoContainer}>
-                <p className={styles.productTitle}>
-                  {product.name} <span>[{product.category}]</span>
-                </p>
+                <p className={styles.productTitle}>{product.firstName}</p>
                 <div>
                   <p>Quantity: {product.quantity}</p>
                   <p>€ {product.price}</p>
