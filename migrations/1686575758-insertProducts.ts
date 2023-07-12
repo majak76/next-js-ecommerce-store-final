@@ -24,10 +24,10 @@ export const products = [
   },
   {
     id: 4,
-    firstName: 'bacon-whiskey',
-    price: 18,
+    firstName: 'haiwaiian',
+    price: 19,
     type: 'burger',
-    text: "We won't ask for your ID when ordering new Whisky Bacon Burger! This is a busy burger, so hold onto your napkins (at least five) and let's get to eatin'. The burger is placed on top of bacon and caramelized onions, which sear into the patty on a hot flat top grill. Then we get down to business. More bacon, crunchy onions, pepper jack, and a potent potable whisky-infused steak sauce bring this bad boy home.",
+    text: "If you still haven't been to Hawaii yet, this savory sweet taste of Soldout's Hawaiian Burger will transport you to the islands. Their burger features a juicy beef patty topped with caramelized onions, Swiss cheese, teriyaki sauce, and a slice of grilled pineapple. The beef patty is seasoned just right without overpowering your palette. After just one bite of this Hawaiian burger, the flavors of charred beef and the teriyaki sauce atop a grilled pineapple and the onions and pickles will make you dream of Hawaii. The burger comes with tomatoes, lettuce, beef patty and homemade sauce that tastes a little bit sweet and savory that will keep you munching.",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const products = [
   },
   {
     id: 7,
-    firstName: ' willy-wonka ',
+    firstName: 'willy-wonka',
     price: 19,
     type: 'burger',
     text: ' Bar Luca in Sydney, Australia, has cooked up the the Beauregard Burger based off the iconic 1971 film Willy Wonka and the Chocolate Factory and Wilder’s role as the titular factory owner. And the burger sounds something straight out of Wonka’s imagination. Served on a rainbow bun, it has a beef patty, tomato soup jelly, fried potatoes, popping cheese, and a secret Wonka sauce.It might not sound like the most appetizing combination of ingredients, but if Willy Wonka and the Chocolate Factory taught us anything it’s to trust the eccentric genius.',
@@ -59,7 +59,7 @@ export const products = [
   },
   {
     id: 9,
-    firstName: ' nutella ',
+    firstName: 'nutella',
     price: 19,
     type: 'burger',
     text: "To make Action Burger's delicious Nutella burger,our cook starts with a fresh beef patty and throws it on the grill. He then takes two freshly made buns and deep-fries them to golden perfection. After that, he cooks two pieces of bacon until they're perfectly crispy. Add some American cheese with the nutella creme on the burger, let it melt, and voilà!",
@@ -84,13 +84,6 @@ export const products = [
     price: 19,
     type: 'burger',
     text: 'We use flavors that harmonize together to create an ideally balanced burger by utilizing 5 colors (white, green, yellow, red, and black), 5 tastes (spicy, sour, bitter, salty and sweet) and 5 senses(food arrangement that attracts the eyes, aromatics that attract the nose, crisp ingredients that make sound, spices that stimulate taste and touch with holding the burger itself) that make this burger a complete experience!',
-  },
-  {
-    id: 13,
-    firstName: 'haiwaiian',
-    price: 19,
-    type: 'burger',
-    text: "If you still haven't been to Hawaii yet, this savory sweet taste of Soldout's Hawaiian Burger will transport you to the islands. Their burger features a juicy beef patty topped with caramelized onions, Swiss cheese, teriyaki sauce, and a slice of grilled pineapple. The beef patty is seasoned just right without overpowering your palette. After just one bite of this Hawaiian burger, the flavors of charred beef and the teriyaki sauce atop a grilled pineapple and the onions and pickles will make you dream of Hawaii. The burger comes with tomatoes, lettuce, beef patty and homemade sauce that tastes a little bit sweet and savory that will keep you munching.",
   },
 ];
 
