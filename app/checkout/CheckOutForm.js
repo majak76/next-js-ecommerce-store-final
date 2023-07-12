@@ -4,10 +4,6 @@ import { useState } from 'react';
 import { clearCookies } from './actions';
 import styles from './checkout.module.scss';
 
-// type CheckOutPageProps = {
-//   product: string;
-// };
-
 export default function CheckOutForm() {
   const router = useRouter();
 
