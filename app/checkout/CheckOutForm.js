@@ -46,7 +46,6 @@ export default function CheckOutForm() {
             className={styles.name}
             value={lastName}
             onChange={(event) => setLastName(event.currentTarget.value)}
-            // required
           />
         </label>
       </div>
