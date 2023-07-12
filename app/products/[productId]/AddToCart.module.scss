@@ -1,5 +1,53 @@
-.productPrice {
-  height: 50px;
-  width: 50px;
+// .productPrice {
+//   height: 50px;
+//   width: 50px;
 
+// }
+@import '../../globalMediaQueries';
+
+.quantityForm {
+  display: flex;
+  gap: 8px;
+
+  input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid var(--primary-color);
+    width: 150px;
+    height: 50px;
+    padding: 0px 8px;
+    font-size: 1.25rem;
+    padding-right: 8px;
+
+    @media screen and (max-width: $laptop) {
+      width: 120px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    height: 50px;
+    width: 490px;
+    border: none;
+    background-color: #d5ab55;
+    color: black;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    cursor: pointer;
+
+    @media screen and (max-width: $laptop) {
+      width: 400px;
+    }
+
+    &:hover {
+      background-color: var(--main-bg-color);
+      outline: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+  }
 }

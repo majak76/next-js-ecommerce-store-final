@@ -60,7 +60,7 @@ export default function StarRating({ productId, userId }: Props) {
           >
             {/* You can change these colors to what you want */}
             <Star
-              fillColor={starValue! >= starValueIndex ? '#D5AB55' : 'green'}
+              fillColor={starValue! >= starValueIndex ? 'orange' : 'green'}
             />
           </button>
         );

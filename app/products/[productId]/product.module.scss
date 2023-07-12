@@ -2,3 +2,127 @@
 //   height: 100px;
 //   width: 100px;
 // }
+
+@import '../../globalMediaQueries';
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  padding: 50px 0px;
+  gap: 90px;
+  margin: 80px 120px 0px;
+
+  @media screen and (max-width: $laptop) {
+    margin: 32px 60px;
+    padding: 90px 0px 50px;
+  }
+
+  // div {
+
+  .productImage {
+    // width: 40%;
+    border-radius: 5px;
+
+    @media screen and (max-width: $laptop) {
+      height: 350px;
+      width: 350px;
+    }
+  }
+  // }
+
+  .productInfoContainer {
+    width: 60%;
+    h1 {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+
+    h5 {
+      border-top: 1px solid var(--primary-color);
+      border-bottom: 1px solid var(--primary-color);
+      font-size: 1rem;
+      padding: 32px;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    h6 {
+      font-size: 1.75rem;
+      font-weight: 400;
+      border-bottom: 1px solid var(--primary-color);
+      margin-bottom: 32px;
+      padding: 8px 0px 8px 32px;
+    }
+
+    .quantityTitle {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.youMayAlsoLikeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0px 120px 60px;
+
+  @media screen and (max-width: $laptop) {
+    margin: 0px 60px 32px;
+  }
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+  }
+
+  .productCardsContainer {
+    overflow: scroll;
+    display: flex;
+    gap: 24px;
+    padding: 8px;
+
+    .productCard {
+      border: 1px solid var(--primary-color);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      div {
+        .categoryTitle {
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          padding-left: 8px;
+          color: var(--primary-color);
+        }
+        .starContainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .rating div {
+          display: flex;
+          justify-content: center;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          padding: 0px 8px;
+        }
+      }
+    }
+  }
+}

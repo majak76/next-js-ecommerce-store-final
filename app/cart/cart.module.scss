@@ -135,15 +135,17 @@
 .changeCounter {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
   border: 1px solid var(--secondary-color);
+  padding-bottom: 20px;
 
   button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     font-size: 1.25rem;
+    padding-bottom: 10px;
   }
 }
 

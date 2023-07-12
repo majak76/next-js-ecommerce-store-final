@@ -26,11 +26,18 @@ export default async function CartPage() {
   return (
     <main>
       {productsInCart.length === 0 ? (
-        <h1 className={styles.emptyCart}> Your cart is empty </h1>
+        <h1 className={styles.emptyCart}> 🛒 Your cart is empty 🛒 </h1>
       ) : (
         <div className={styles.cartContainer}>
           <div className={styles.cartOverviewContainer}>
-            <div className={styles.cartTableHead}></div>
+            <div className={styles.cartTableHead}>
+              <div>Image</div>
+              <div>Name</div>
+              <div>Price</div>
+              <div>Quantity</div>
+              <div>Total</div>
+              <div>Action</div>
+            </div>
 
             <div className={styles.itemsInCart}>
               {productsInCart.map((product) => {
@@ -48,7 +55,7 @@ export default async function CartPage() {
                         width={130}
                         height={130}
                         className={styles.productImage}
-                        alt={product.name}
+                        alt={product.firstName}
                       />
                     </div>
                     <Link
@@ -59,7 +66,9 @@ export default async function CartPage() {
                     </Link>
                     <p>€ {product.price}</p>
                     {/* <form> */}
-                    <ChangeQuantity product={product} />
+                    <div className={styles.changeCounter}>
+                      <ChangeQuantity product={product} />
+                    </div>
                     {/* </form> */}
                     <div> Subtotal: €{subTotal}</div>
                     <form
@@ -92,6 +101,7 @@ export default async function CartPage() {
                   Continue Shopping
                 </Link>
                 <p />
+                <br></br>
                 <Link
                   className={`${styles.checkoutButton} ${styles.cartButton}`}
                   href="/checkout/"

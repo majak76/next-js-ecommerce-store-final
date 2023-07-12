@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.header}>
-        <div className={styles.heroimage}>
+        <div className={styles.heroImage}>
           <Image
             src="/img/homepage.jpg"
             width="500"
@@ -16,15 +16,21 @@ export default function Home() {
             className={styles.image}
           />
         </div>
-        <div>
-          <h1>Life is too short for self-hatred and celery sticks.</h1>
-        </div>
-        <p>
-          Try some of the craziest burger combos on earth. The richness of the
-          ingredients and the explosion of flavor in just one bite will make you
-          question everything you've eaten so far.{' '}
-        </p>
 
+        <div className={styles.descriptionBox}>
+          <div className={styles.description1}>
+            <h1>Life is too short for self-hatred and celery sticks.</h1>
+          </div>
+          <div className={styles.description2}>
+            <p>
+              Try some of the craziest burger combos on earth. The richness of
+              the ingredients and the explosion of flavor in just one bite will
+              make you question everything you've eaten so far.{' '}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.idMenuButton}>
         <Link href="/products" className={styles.menuLink}>
           {' '}
           Menu

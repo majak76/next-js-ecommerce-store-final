@@ -53,27 +53,35 @@ export default async function SingleProductPage({ params }) {
   // !user ? '' : <AddToCart />;
   return (
     <section className={styles.productContainer}>
-      <StarRating productId={product.id} userId={user?.id} />
-      <div>
-        <Image
-          data-test-id="product-image"
-          src={`/img/${singleProduct.firstName}.jpg`}
-          width={500}
-          height={400}
-          className={styles.productImage}
-          alt="burger"
-        />
+      <div className={styles.starContainer}>
+        <div className={styles.rating}>
+          {' '}
+          <StarRating productId={product.id} userId={user?.id} />{' '}
+        </div>
+        <div>
+          <Image
+            data-test-id="product-image"
+            src={`/img/${singleProduct.firstName}.jpg`}
+            width={500}
+            height={500}
+            className={styles.productImage}
+            alt="burger"
+          />
+        </div>
       </div>
       <div className={styles.productInfoContainer}>
         <h1>{singleProduct.firstName}</h1>
-        <h5>{singleProduct.description}</h5>
-        <div className={styles.productPrice} data-test-id="product-price">
+        <h5>{singleProduct.text}</h5>
+        {/* <h5>{singleProduct.description}</h5> */}
+        <h6 className={styles.productPrice} data-test-id="product-price">
           {' '}
           € {singleProduct.price}
+        </h6>
+        {/* <h5>{singleProduct.text}</h5> */}
+        <p className={styles.quantityTitle}>Quantity</p>
+        <div>
+          <AddToCart productId={singleProduct.id} />
         </div>
-        <p>{singleProduct.text}</p>
-
-        <AddToCart productId={singleProduct.id} />
       </div>
     </section>
   );
