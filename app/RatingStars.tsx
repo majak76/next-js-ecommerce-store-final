@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { submitReview } from '../database/reviews';
+import styles from './globalMediaQueries.scss';
 import Star from './Star';
 
 type Props = {
@@ -43,7 +44,7 @@ export default function StarRating({ productId, userId }: Props) {
   }, [starValue, productIdValue]);
 
   return (
-    <div>
+    <>
       {/* This is how the five stars that shows are being created */}
       {Array.from(Array(5)).map((key, i) => {
         const starValueIndex = i + 1;
@@ -74,7 +75,7 @@ export default function StarRating({ productId, userId }: Props) {
       <br /> */}
 
       {/* End of the code that should not be your concern */}
-    </div>
+    </>
   );
 }
 

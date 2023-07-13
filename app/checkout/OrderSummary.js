@@ -43,8 +43,8 @@ export default async function OrderSummary() {
               <div>
                 <Image
                   src={`/img/${product.firstName}.jpg`}
-                  width={60}
-                  height={60}
+                  width={90}
+                  height={90}
                   alt={product.firstName}
                 />
               </div>

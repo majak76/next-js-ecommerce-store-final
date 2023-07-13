@@ -54,10 +54,6 @@ export default async function SingleProductPage({ params }) {
   return (
     <section className={styles.productContainer}>
       <div className={styles.starContainer}>
-        <div className={styles.rating}>
-          {' '}
-          <StarRating productId={product.id} userId={user?.id} />{' '}
-        </div>
         <div>
           <Image
             data-test-id="product-image"
@@ -70,7 +66,12 @@ export default async function SingleProductPage({ params }) {
         </div>
       </div>
       <div className={styles.productInfoContainer}>
-        <h1>{singleProduct.firstName}</h1>
+        <div className={styles.titleRating}>
+          <h1>{singleProduct.firstName}</h1>
+          <div className={styles.starRating}>
+            <StarRating productId={product.id} userId={user?.id} />{' '}
+          </div>
+        </div>
         <h5>{singleProduct.text}</h5>
         {/* <h5>{singleProduct.description}</h5> */}
         <h6 className={styles.productPrice} data-test-id="product-price">

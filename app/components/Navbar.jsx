@@ -28,29 +28,31 @@ const Navbar = async () => {
       <Link className={style.linkRegister} href="/register">
         register
       </Link> */}
-      <div>
-        {user ? (
-          <>
-            <div>{user.username}</div>
-            <LogoutButton />
-          </>
-        ) : (
-          <>
-            <Link href="/register">register</Link>
-            <Link href="/login">login</Link>
-          </>
-        )}
-      </div>
+      <div className={style.loginCart}>
+        <div className={style.button}>
+          {user ? (
+            <>
+              <div>{user.username}</div>
+              <LogoutButton />
+            </>
+          ) : (
+            <>
+              <Link href="/register">register</Link>
+              <Link href="/login">login</Link>
+            </>
+          )}
+        </div>
 
-      <div className={style.cart}>
-        <Link className={style.link} href="/cart">
-          <AiOutlineShoppingCart className={style.linkCart} />
-        </Link>
-        <div className={style.number}>
-          <Link className={style.linkNumber} href="/">
-            {' '}
+        <div className={style.cart}>
+          <Link className={style.link} href="/cart">
+            <AiOutlineShoppingCart className={style.linkCart} />
           </Link>
-          <TotalNumber />
+          <div className={style.number}>
+            <Link className={style.linkNumber} href="/">
+              {' '}
+            </Link>
+            <TotalNumber />
+          </div>
         </div>
       </div>
     </nav>

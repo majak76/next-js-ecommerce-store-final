@@ -16,15 +16,18 @@
 }
 
 .navbarItem {
-  margin-right: 500rem;
+  /* margin-right: 500rem; */
 }
 
 .navigator {
-  width: 100%;
+  /* width: 100%;
   margin: auto;
   color: green;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; */
+
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
@@ -34,7 +37,7 @@
 }
 
 .cart {
-  width: 40%;
+  width: 15%;
   display: flex;
   justify-content: right;
   position: relative;
@@ -69,8 +72,8 @@
 }
 .number {
   position: absolute;
-  top: -5%;
-  right: 3%;
+  top: 19%;
+  right: 15%;
   font-weight: bold;
 }
 @media screen and (max-width: 375px) {
@@ -93,4 +96,14 @@
   padding: 5px;
   display: flex;
   gap: 50rem;
+}
+.button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.loginCart {
+  width: 800px;
+  display: flex;
+  justify-content: flex-end;
 }

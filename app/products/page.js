@@ -64,16 +64,11 @@ export default async function ProductsPage() {
           // const averageRating = Math.round((sum / ratings.length) * 10) / 10;
 
           return (
-            <div key={`product-div-${product.id}`}>
+            <div
+              key={`product-div-${product.id}`}
+              className={styles.productCart}
+            >
               {/* <StarRating /> */}
-              <div className={styles.ratingAndPrice} />
-              {/* <StarRating productId={product.id} userId={user?.id} /> */}
-              <FixStarRating rating={averageRating} />
-              {/* <StarRating rating={averageRating} /> */}
-              {!isNaN(averageRating) && <span> {averageRating} </span>}
-              <span className={`${quicksand.className} ${styles.price}`}>
-                {product.price}€
-              </span>
 
               <Link
                 className={styles.productLink}
@@ -81,6 +76,17 @@ export default async function ProductsPage() {
               >
                 {product.firstName}
               </Link>
+              <div className={styles.ratingAndPrice}>
+                <div className={styles.rating}>
+                  {!isNaN(averageRating) && <span> {averageRating} </span>}
+
+                  <FixStarRating rating={averageRating} />
+                </div>
+                <div className={`${quicksand.className} ${styles.price}`}>
+                  {product.price}€
+                </div>
+              </div>
+
               <br />
               <Image
                 className={styles.productImage}
