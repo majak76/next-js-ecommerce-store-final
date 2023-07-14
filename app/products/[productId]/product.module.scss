@@ -50,8 +50,8 @@
       }
     }
     h5 {
-      border-top: 1px solid var(--primary-color);
-      border-bottom: 1px solid var(--primary-color);
+      border-top: 1px solid brown;
+      border-bottom: 1px solid brown;
       font-size: 1rem;
       padding: 32px;
       font-weight: 400;
@@ -61,7 +61,7 @@
     h6 {
       font-size: 1.75rem;
       font-weight: 400;
-      border-bottom: 1px solid var(--primary-color);
+      border-bottom: 1px solid brown;
       margin-bottom: 32px;
       padding: 8px 0px 8px 32px;
     }
@@ -92,7 +92,7 @@
   h2 {
     text-align: center;
     text-transform: uppercase;
-    color: var(--primary-color);
+    color: brown;
   }
 
   .productCardsContainer {
@@ -102,7 +102,7 @@
     padding: 8px;
 
     .productCard {
-      border: 1px solid var(--primary-color);
+      border: 1px solid brown;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
@@ -118,7 +118,7 @@
           font-size: 0.7rem;
           text-transform: uppercase;
           padding-left: 8px;
-          color: var(--primary-color);
+          color: brown;
         }
         .starContainer {
           display: flex;

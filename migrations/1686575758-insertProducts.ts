@@ -17,7 +17,7 @@ export const products = [
   },
   {
     id: 3,
-    firstName: 'mexican-chorizo-garlic-shrimp',
+    firstName: 'chorizo-shrimp',
     price: 18,
     type: 'burger',
     text: "Loaded with creamy guacamole, pickled onions, and spicy cheese, this Mexican chorizo burger is dripping with flavor! The patties are crafted with a blend of beef and chorizo sausage and are perfect for topping with your favorite Mexican flavors.Everyone knows chorizo and shrimp are in love, and there's no reason why this romance wouldn't extend deliciously into the world of burgers. A burger that compromises between land and sea without being wishy-washy.",
@@ -31,14 +31,14 @@ export const products = [
   },
   {
     id: 5,
-    firstName: 'chicken-katsu-rice',
+    firstName: 'chicken-katsu',
     price: 19,
     type: 'burger',
     text: 'Crispy golden brown crust enveloping juicy tender sake flavoured chicken meat between 2 perfectly pan seared brown rice patties just screams Chicken Katsu Burger. The hero of the dish is the rice. The rice should be sticky, chewy and moist enough to form a perfect rice patty without breaking apart when it’s pan seared. We would say brown rice burger patties are the new burger buns.The layers of fragrant rice patty with crispy crunchy katsu burger, tomatoes and lettuce with a generous drizzle of tonkatsu sauce plus furikake topping will please any hungry tummy! ',
   },
   {
     id: 6,
-    firstName: 'the-elvis-fried-banana',
+    firstName: 'elvis',
     price: 19,
     type: 'burger',
     text: " You've never had a burger quite like this before. Legend has it Elvis loved his peanut butter, bacon, and banana sandwiches, so we created this salty, sweet burger as a tribute to the king of rock 'n' roll. Piled high with creamy peanut butter, extra-crispy bacon, caramelized bananas, and a sweet honey drizzle, this totally unique combination of flavors will have you all shook up. ",
@@ -66,7 +66,7 @@ export const products = [
   },
   {
     id: 10,
-    firstName: 'mermaid-cauliflower-rice',
+    firstName: 'mermaid-cauliflower',
     price: 19,
     type: 'burger',
     text: 'Tender sweet potatoes stuffed with a delicious blend of stir-fried veggies and chicken, topped with a spicy peanut sauce. Served with caramelized onions, red onions, lettuce, tomato, and pickles.',

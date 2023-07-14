@@ -20,8 +20,8 @@
 .cartTableHead {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding-bottom: 30px;
-  border-bottom: 10px solid var(--green);
+  padding-bottom: 16px;
+  border-bottom: 2px solid brown;
   text-align: center;
 }
 .itemsInCart {
@@ -29,7 +29,7 @@
   flex-direction: column;
 
   .productCard {
-    border-bottom: 0.5px solid var(--primary-color);
+    border-bottom: 0.5px solid brown;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -59,7 +59,7 @@
 }
 
 .cartTotalCard {
-  background-color: var(--primary-color);
+  background-color: grey;
   padding: 32px;
   width: 350px;
   height: 280px;
@@ -87,7 +87,7 @@
 }
 .cartButton {
   width: 100%;
-  padding: 8px 0px;
+  padding: 10px 80px;
   text-align: center;
   cursor: pointer;
 }
@@ -95,7 +95,7 @@
 .continueShoppingButton {
   color: black;
   font-size: 1, 2rem;
-  background-color: var(--main-bg-color);
+  background-color: white;
   &:hover {
     background-color: gray;
     outline: 1px solid var(--main-bg-color);
@@ -104,12 +104,13 @@
 }
 
 .checkoutButton {
-  color: black;
-  font-size: 1, 6rem;
+  color: white;
+  font-size: 1, 8rem;
+  background-color: black;
 
   &:hover {
     background-color: black;
-    outline: 1px solid var(--main-bg-color);
+    outline: 10px solid var(--main-bg-color);
     color: white;
   }
 }
@@ -122,7 +123,7 @@
     cursor: pointer;
 
     .removeIcon {
-      font-size: 1.25rem;
+      font-size: large;
     }
 
     &:hover {
@@ -137,15 +138,15 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid black;
   // padding-bottom: 10px;
 
   button {
-    background-color: transparent;
+    background-color: red;
     border: none;
     cursor: pointer;
     font-size: 1.25rem;
-    padding-bottom: 2px;
+    padding-bottom: 0, 1px;
     display: flex;
     justify-content: center;
     align-items: center;

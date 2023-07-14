@@ -74,9 +74,10 @@ export default async function SingleProductPage({ params }) {
         </div>
         <h5>{singleProduct.text}</h5>
         {/* <h5>{singleProduct.description}</h5> */}
-        <h6 className={styles.productPrice} data-test-id="product-price">
+        <h6>
           {' '}
-          € {singleProduct.price}
+          Price:{''}
+          <span data-test-id="product-price">{singleProduct.price}</span> EUR
         </h6>
         {/* <h5>{singleProduct.text}</h5> */}
         <p className={styles.quantityTitle}>Quantity</p>
