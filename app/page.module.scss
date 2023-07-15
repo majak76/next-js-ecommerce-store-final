@@ -9,7 +9,7 @@ $desktop: 1280px;
 
 .heroSection {
   height: 100vh;
-  background-color: #1b1212;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,16 +83,16 @@ $desktop: 1280px;
     }
 
     h1 {
-      color: white;
+      color: #1b1212;
       font-family: var(--title-font);
       font-size: 35px;
       margin-bottom: 24px;
     }
     p {
-      color: white;
+      color: #1b1212;
       font-size: 20px;
       line-height: 1, 5;
-      margin-bottom: 10px;
+      margin-bottom: 40px;
     }
   }
   @media screen and (max-width: $laptop) {
@@ -100,13 +100,13 @@ $desktop: 1280px;
   }
 
   .menuLink {
-    color: white;
-    border: 1px solid white;
+    color: #1b1212;
+    border: 1px solid #1b1212;
     padding: 8px 16px;
     text-decoration: none;
     width: 200px;
     text-align: center;
-    margin-left: 10%;
+    margin-right: 80px;
   }
   .description1 {
     margin-bottom: 50px;

@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { submitReview } from '../database/reviews';
-import styles from './globalMediaQueries.scss';
+// import styles from './globalMediaQueries.scss';
 import Star from './Star';
 
 type Props = {
@@ -61,7 +61,7 @@ export default function StarRating({ productId, userId }: Props) {
           >
             {/* You can change these colors to what you want */}
             <Star
-              fillColor={starValue! >= starValueIndex ? 'orange' : 'green'}
+              fillColor={starValue! >= starValueIndex ? 'orange' : '#d5ab55'}
             />
           </button>
         );
