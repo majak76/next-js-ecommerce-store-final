@@ -26,7 +26,7 @@
     margin-top: 20px;
     outline: none;
     padding-left: 8px;
-    border: 1px solid brown;
+    border: 1px solid #d5ab55;
     border-radius: 5px;
 
     input::-webkit-outer-spin-button,
@@ -77,7 +77,7 @@
         top: 67%;
         left: 54%;
         transform: translate(-50%, -50%);
-        color: red;
+        color: #d5ab55;
       }
       .expiry {
         width: 60px;
@@ -105,7 +105,7 @@
     width: 500px;
     height: 40px;
     margin-top: 32px;
-    background-color: brown;
+    background-color: #d5ab55;
     border: none;
     outline: none;
     color: #fff;
@@ -131,13 +131,14 @@
   h1 {
     font-size: 1.5rem;
     color: #fff;
-    background-color: brown;
+    background-color: #d5ab55;
     border-radius: 5px;
     padding-left: 8px;
+    font-weight: lighter;
   }
 
   .summaryCard {
-    border-bottom: 1px solid brown;
+    border-bottom: 1px solid #d5ab55;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -150,7 +151,7 @@
 
       .infoContainer {
         .productTitle {
-          font-weight: 800;
+          font-weight: 600;
           font-size: 1.25rem;
           span {
             font-size: 0.5rem;

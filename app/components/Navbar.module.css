@@ -28,6 +28,7 @@
 
   display: flex;
   align-items: center;
+  background-color: #d5aa55c7;
 }
 
 .navigation {
@@ -43,9 +44,9 @@
   position: relative;
 }
 .linkHome {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--body-font);
   font-size: x-large;
-  color: rgba(0, 0, 0, 0.725);
+  color: white;
   background-color: none;
   display: flex;
   justify-content: center;
@@ -53,18 +54,21 @@
   text-decoration: none;
 }
 .linkProducts {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: var(--body-font);
   font-size: x-large;
-  color: rgba(0, 0, 0, 0.725);
+  color: white;
   display: flex;
   justify-content: center;
   text-decoration: none;
 }
 .linkCart {
+  /* cursor: pointer;
+  font-size: 3rem; */
+
   width: 50px;
   height: 50px;
   margin-left: auto;
-  color: black;
+  color: rgba(255, 255, 255, 0.682);
 }
 
 .link {
@@ -72,9 +76,10 @@
 }
 .number {
   position: absolute;
-  top: 19%;
+  top: 16%;
   right: 15%;
-  font-weight: bold;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.725);
 }
 @media screen and (max-width: 375px) {
   .number {
@@ -84,7 +89,7 @@
 
 .linkLogIn {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 5px;
   display: flex;
   gap: 50rem;
@@ -92,7 +97,7 @@
 
 .linkRegister {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 5px;
   display: flex;
   gap: 50rem;
@@ -101,6 +106,7 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  font-family: var(--body-font);
 }
 .loginCart {
   width: 800px;

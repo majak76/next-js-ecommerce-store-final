@@ -57,7 +57,8 @@ export default async function SingleProductPage({ params }) {
         <div>
           <Image
             data-test-id="product-image"
-            src={`/img/${singleProduct.firstName}.jpg`}
+            // src={`/img/${singleProduct.firstName}.jpg`}
+            src={`/img/${singleProduct.firstName.toLowerCase()}.jpg`}
             width={500}
             height={500}
             className={styles.productImage}
@@ -76,7 +77,7 @@ export default async function SingleProductPage({ params }) {
         {/* <h5>{singleProduct.description}</h5> */}
         <h6>
           {' '}
-          Price:{''}
+          Price: {''}
           <span data-test-id="product-price">{singleProduct.price}</span> EUR
         </h6>
         {/* <h5>{singleProduct.text}</h5> */}

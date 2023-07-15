@@ -15,12 +15,15 @@ $desktop: 1280px;
   padding: 50px 34px 0px;
 
   h1 {
-    font-family: var(--accent-font);
-    font-size: 4rem;
+    font-family: Poppins, sans-serif;
+    font-size: 3rem;
 
     @media screen and (max-width: 1600px) {
       font-size: 3rem;
     }
+  }
+  p {
+    font-family: Poppins, sans-serif;
   }
 
   div {

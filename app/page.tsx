@@ -24,7 +24,7 @@ export default function Home() {
           <div className={styles.description2}>
             <p>
               Try some of the craziest burger combos on earth. The richness of
-              the ingredients and the explosion of flavor in just one bite will
+              the ingredients and the explosion of flavour in just one bite will
               make you question everything you've eaten so far.{' '}
             </p>
           </div>

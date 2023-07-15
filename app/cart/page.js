@@ -66,10 +66,12 @@ export default async function CartPage() {
                     </Link>
                     <p>€ {product.price}</p>
                     {/* <form> */}
-                    <div className={styles.changeCounter}>
-                      <div className={styles.button}>
-                        <div className={styles.number}>
-                          <ChangeQuantity product={product} />
+                    <div>
+                      <div className={styles.changeCounter}>
+                        <div className={styles.button}>
+                          <div className={styles.number}>
+                            <ChangeQuantity product={product} />
+                          </div>
                         </div>
                       </div>
                     </div>
