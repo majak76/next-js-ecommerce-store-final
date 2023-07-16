@@ -98,7 +98,7 @@ export default async function CartPage() {
               >
                 €{getCartTotal(productsInCart)}
               </div>
-              <div>
+              <div className={styles.buttons}>
                 <br />
                 <Link
                   className={`${styles.continueShoppingButton} ${styles.cartButton}`}
@@ -106,8 +106,8 @@ export default async function CartPage() {
                 >
                   Continue Shopping
                 </Link>
-                <p />
-                <br></br>
+                <br />
+                <br />
                 <Link
                   className={`${styles.checkoutButton} ${styles.cartButton}`}
                   href="/checkout/"

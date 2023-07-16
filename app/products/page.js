@@ -83,7 +83,7 @@ export default async function ProductsPage() {
                   <FixStarRating rating={averageRating} />
                 </div>
                 <div className={`${quicksand.className} ${styles.price}`}>
-                  {product.price}€
+                  {/* <p className={styles.productPrice}> {product.price} € </p> */}
                 </div>
               </div>
 

@@ -39,9 +39,9 @@
 
       h1 {
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: x-large;
         background-color: none;
-        font-family: 'Caveat', sans-serif;
+        font-family: 'Poppins', sans-serif;
       }
       .starRating {
         display: flex;
@@ -71,6 +71,8 @@
     .quantityTitle {
       font-size: 0.8rem;
       text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 1400px;
     }
 
     div {

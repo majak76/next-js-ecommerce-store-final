@@ -110,9 +110,10 @@
     outline: none;
     color: #fff;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: medium;
     text-transform: uppercase;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 
     &:hover {
       background-color: var(--main-bg-color);
@@ -129,12 +130,13 @@
   padding: 40px 0px;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: x-large;
     color: #fff;
     background-color: #d5ab55;
     border-radius: 5px;
     padding-left: 8px;
-    font-weight: lighter;
+
+    font-family: Poppins, sans-serif;
   }
 
   .summaryCard {

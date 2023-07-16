@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding-bottom: 16px;
-  border-bottom: 2px solid #d5ab55;
+  border-bottom: 3px solid #d5ab55;
   text-align: center;
 }
 .itemsInCart {
@@ -62,13 +62,14 @@
   background-color: #d5aa55e1;
   padding: 32px;
   width: 350px;
-  height: 280px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   color: var(--main-bg-color);
   border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 .h3 {
   font-size: 0.9rem;
@@ -96,6 +97,8 @@
   color: black;
   font-size: small;
   background-color: white;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
   &:hover {
     background-color: transparent;
     outline: 2px solid var(--main-bg-color);
@@ -105,8 +108,11 @@
 
 .checkoutButton {
   color: white;
-  // font-size: medium;
+  font-size: medium;
   background-color: black;
+  display: block;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
 
   &:hover {
     background-color: transparent;
