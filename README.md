@@ -1,10 +1,12 @@
-<h1>next-js-ecommerce-store-final</h1>
+h1>next-js-ecommerce-store-final</h1>
 <hr><p>This is my final project that I have done during my UpLeveled Bootcamp, where I created and designed a full-stack e-commerce web application using next.js. The main features are:</p>
-<p>a product page: where all products are listed, as well as the star ratings for each product
-a single product page: when a product is clicked, the user is redirected to the single product page, the quantity can be added to the cart
-a shopping cart page: it shows all products added to the cart, including the quantity (which can be modified), the price, a button to remove an item from the cart and the total price of all products in the cart
-Checkout page: it displays the total amount and asks for shipping and payment information
-Thank you page: when the user clicks the "Confirm Order" button on the checkout page, he will be redirected to the thank you page where the order will be confirmed.</p><h2>General Information</h2>
+<ul>
+<li>product page: where all products are listed, as well as the star ratings for each product</li>
+<li>single product page: when a product is clicked, the user is redirected to the single product page, the quantity can be added to the cart</li>
+<li>shopping cart page: it shows all products added to the cart, including the quantity (which can be modified), the price, a button to remove an item from the cart and the total price of all products in the cart</li>
+<li>checkout page: it displays the total amount and asks for shipping and payment information</li>
+<li>thank you page: when the user clicks the "Confirm Order" button on the checkout page, he will be redirected to the thank you page where the order will be confirmed.</li>
+</ul><h2>General Information</h2>
 <hr><ul>
 <li>This e-commerce store offers a wide variety of unique and very unusual burger combinations for every elevated taste.</li>
 </ul><h2>Technologies Used</h2>
@@ -50,8 +52,6 @@ Thank you page: when the user clicks the "Confirm Order" button on the checkout 
 </ul><h2>Project Status</h2>
 <hr><p>Completed</p><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/majakrmar/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/majak76"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
-
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
