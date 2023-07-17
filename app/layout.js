@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from './components/Navbar';
 import TotalNumber from './totalnumber';
 
-export const poppins = Poppins({ subsets: ['latin'] });
+export const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 
 export const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
