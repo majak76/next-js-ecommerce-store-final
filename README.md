@@ -19,11 +19,11 @@
 </ul><ul>
 <li>React</li>
 </ul><ul>
+<li>TypeScript</li>
+</ul><ul>
 <li>next.js</li>
 </ul><ul>
-<li>postreSQL</li>
-</ul><ul>
-<li>typescript</li>
+<li>PostreSQL</li>
 </ul><ul>
 <li>scss</li>
 </ul><h2>Features</h2>
@@ -52,6 +52,7 @@
 </ul><h2>Project Status</h2>
 <hr><p>Completed</p><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/majakrmar/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/majak76"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
