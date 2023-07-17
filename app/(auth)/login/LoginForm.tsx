@@ -9,7 +9,7 @@ import { getSafeReturnToPath } from '../../../util/validation';
 import { LoginResponseBodyPost } from '../../api/(auth)/login/route';
 import styles from '../../styles/loginPage.module.scss';
 
-type Props = { returnTo?: string };
+type Props = { returnTo?: string | string[] };
 
 export default function LoginForm(props: Props) {
   const [username, setUsername] = useState('');
@@ -36,10 +36,7 @@ export default function LoginForm(props: Props) {
       return;
     }
     setSuccess(true);
-    router.push(
-      getSafeReturnToPath(props.returnTo) ||
-        (`/${data.user.username}` as Route),
-    );
+    router.push(getSafeReturnToPath(props.returnTo) || (`/products` as Route));
     router.refresh();
   }
 
