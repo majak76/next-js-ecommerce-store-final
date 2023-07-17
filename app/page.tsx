@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { playfairDisplay } from './layout';
 // import { products } from '../database/products';
 import styles from './page.module.scss';
 
@@ -19,7 +20,9 @@ export default function Home() {
 
         <div className={styles.descriptionBox}>
           <div className={styles.description1}>
-            <h1>Life is too short for self-hatred and celery sticks.</h1>
+            <h1 className={playfairDisplay.className}>
+              Life is too short for self-hatred and celery sticks.
+            </h1>
           </div>
           <div className={styles.description2}>
             <p>
