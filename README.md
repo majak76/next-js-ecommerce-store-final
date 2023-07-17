@@ -1,4 +1,4 @@
-h1>next-js-ecommerce-store-final</h1>
+<h1>next-js-ecommerce-store-final</h1>
 <hr><p>This is my final project that I have done during my UpLeveled Bootcamp, where I created and designed a full-stack e-commerce web application using next.js. The main features are:</p>
 <ul>
 <li>product page: where all products are listed, as well as the star ratings for each product</li>
