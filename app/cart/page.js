@@ -51,7 +51,7 @@ export default async function CartPage() {
                     {' '}
                     <div>
                       <Image
-                        src={`/img/${product.firstName}.jpg`}
+                        src={`/img/${product.firstName.toLowerCase()}.jpg`}
                         width={130}
                         height={130}
                         className={styles.productImage}
