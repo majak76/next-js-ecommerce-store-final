@@ -90,7 +90,7 @@ export default async function ProductsPage() {
               <br />
               <Image
                 className={styles.productImage}
-                src={`/img/${product.firstName}.jpg`}
+                src={`/img/${product.firstName.toLowerCase()}.jpg`}
                 width={200}
                 height={200}
                 priority
